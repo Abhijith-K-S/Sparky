@@ -8,4 +8,7 @@
     <color name="darkGrey">#121212</color>
     <color name="widgetBlack">#000000</color>
     <color name="titleWhite">#F7F7F7</color>
+    <color name="titlecolor">#CDDC39</color>
+    <color name="descolor">#403E3E</color>
+    <color name="timecolor">#FF9800</color>
 </resources>
