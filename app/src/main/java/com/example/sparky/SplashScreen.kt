@@ -16,11 +16,11 @@ class SplashScreen : AppCompatActivity() {
         ic_logo.startAnimation(AnimationUtils.loadAnimation(this,R.anim.splash_in))
         Handler().postDelayed({
             ic_logo.startAnimation(AnimationUtils.loadAnimation(this,R.anim.splash_out))
-        },1500)
+        },1000)
         Handler().postDelayed({
             ic_logo.visibility = View.GONE
             startActivity(Intent(this,MainActivity::class.java))
             finish()
-        },1500)
+        },1000)
     }
 }

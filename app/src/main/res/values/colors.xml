@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="accentDark">#262624</color>
+    <color name="statusBar">#14171A</color>
+    <color name="darkGrey">#121212</color>
+    <color name="widgetBlack">#000000</color>
+    <color name="titleWhite">#F7F7F7</color>
 </resources>
