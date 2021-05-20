@@ -11,4 +11,7 @@
     <color name="titlecolor">#CDDC39</color>
     <color name="descolor">#403E3E</color>
     <color name="timecolor">#FF9800</color>
+    <color name="TextBoxColor">#31322F</color>
+    <color name="ButtonColor">#909181</color>
+    <color name="createButtonColor">#2C961B</color>
 </resources>

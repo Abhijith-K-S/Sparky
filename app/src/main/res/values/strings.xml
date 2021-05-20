@@ -2,4 +2,11 @@
     <string name="app_name">Sparky</string>
     <string name="action_settings">Settings</string>
     <string name="title">Sparky</string>
+    <string name="newTaskTitle">New Task</string>
+    <string name="newTaskText">Task</string>
+    <string name="newDescText">Description</string>
+    <string name="newDateText">Date</string>
+    <string name="choose">Choose</string>
+    <string name="newTimeText">Time</string>
+    <string name="createTask">Create Task</string>
 </resources>

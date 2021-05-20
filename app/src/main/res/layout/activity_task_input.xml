@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accentDark"
+    tools:context=".TaskInput">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="5dp"
+        tools:layout_editor_absoluteX="-7dp"
+        tools:layout_editor_absoluteY="-122dp">
+
+        <TextView
+            android:id="@+id/newTaskTitle"
+            android:layout_width="409dp"
+            android:layout_height="60dp"
+            android:background="@color/darkGrey"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal"
+            android:text="@string/newTaskTitle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/titlecolor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/newTaskText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal"
+            android:text="@string/newTaskText"
+            android:textColor="@color/timecolor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newTaskTitle"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <EditText
+            android:id="@+id/newTaskTextBox"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:background="@color/TextBoxColor"
+            android:gravity="top"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLength="50"
+            android:paddingLeft="3dp"
+            android:paddingTop="2dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="@color/titleWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.238"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newTaskText"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/newDescText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal"
+            android:text="@string/newDescText"
+            android:textColor="@color/timecolor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newTaskTextBox"
+            app:layout_constraintVertical_bias="0.083" />
+
+        <EditText
+            android:id="@+id/newDescTextBox"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:background="@color/TextBoxColor"
+            android:gravity="top"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLength="250"
+            android:paddingLeft="3dp"
+            android:paddingTop="2dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="@color/titleWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newDescText"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/newDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal"
+            android:text="@string/newDateText"
+            android:textColor="@color/timecolor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newDescTextBox"
+            app:layout_constraintVertical_bias="0.12" />
+
+        <EditText
+            android:id="@+id/newDateTextBox"
+            android:layout_width="209dp"
+            android:layout_height="32dp"
+            android:background="@color/TextBoxColor"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:paddingLeft="3dp"
+            android:paddingTop="2dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/titleWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newDescTextBox"
+            app:layout_constraintVertical_bias="0.201"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/dateButton"
+            android:layout_width="101dp"
+            android:layout_height="47dp"
+            android:text="@string/choose"
+            android:textSize="16sp"
+            android:background="@color/ButtonColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.93"
+            app:layout_constraintStart_toEndOf="@+id/newDateTextBox"
+            app:layout_constraintTop_toBottomOf="@+id/newDescTextBox"
+            app:layout_constraintVertical_bias="0.186" />
+
+        <TextView
+            android:id="@+id/newTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal"
+            android:text="@string/newTimeText"
+            android:textColor="@color/timecolor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newDateTextBox"
+            app:layout_constraintVertical_bias="0.203" />
+
+        <EditText
+            android:id="@+id/newTimeTextBox"
+            android:layout_width="209dp"
+            android:layout_height="32dp"
+            android:background="@color/TextBoxColor"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:paddingLeft="3dp"
+            android:paddingTop="2dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/titleWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newTimeText"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/timeButton"
+            android:layout_width="101dp"
+            android:layout_height="47dp"
+            android:layout_marginBottom="152dp"
+            android:background="@color/ButtonColor"
+            android:text="@string/choose"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.931"
+            app:layout_constraintStart_toEndOf="@+id/newTimeTextBox"
+            app:layout_constraintTop_toBottomOf="@+id/dateButton"
+            app:layout_constraintVertical_bias="0.888" />
+
+        <Button
+            android:id="@+id/createTaskButton"
+            android:layout_width="108dp"
+            android:layout_height="47dp"
+            android:background="@color/createButtonColor"
+            android:shadowColor="#000000"
+            android:shadowDx="2.9"
+            android:shadowDy="2.3"
+            android:shadowRadius="1.6"
+            android:text="@string/createTask"
+            android:textColor="@color/titleWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeButton" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
