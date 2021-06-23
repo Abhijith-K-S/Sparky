@@ -1,10 +1,16 @@
 package com.example.sparky
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Task")
-class Task(val title:String, val desc:String, val date:String, val time:String)
+data class Task(
+    @ColumnInfo(name="title") var title: String,
+    @ColumnInfo(name="description") var desc: String,
+    @ColumnInfo(name="date") var date: String,
+    @ColumnInfo(name="time") var time: String
+)
 {
-    @PrimaryKey(autoGenerate = true) val id=0
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name="id") var id: Int = 0
 }

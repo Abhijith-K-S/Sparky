@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.sqlite.db.SupportSQLiteDatabase
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
-@Database(entities = arrayOf(Task::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(Task::class), version = 2, exportSchema = false)
 abstract class TaskDatabase: RoomDatabase() {
-    abstract fun getTask(): TaskDao
+    abstract fun taskDao(): TaskDao
 
     companion object {
         @Volatile
@@ -19,11 +22,13 @@ abstract class TaskDatabase: RoomDatabase() {
                     context.applicationContext,
                     TaskDatabase::class.java,
                     "task_database"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
+
                 INSTANCE = instance
                 instance
             }
         }
     }
-
 }

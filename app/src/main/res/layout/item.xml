@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        app:cardBackgroundColor="@color/widgetBlack"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="2dp"
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground">
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="@color/widgetColor"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:focusable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -22,20 +22,20 @@
 
         <TextView
                 android:id="@+id/title"
-                android:textSize="40dp"
-                android:text="Title"
+                android:textSize="40sp"
                 android:textColor="@color/titlecolor"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.05"
-                app:layout_constraintVertical_bias="0.125">
+                app:layout_constraintVertical_bias="0.125"
+                tools:text="Title">
         </TextView>
 
         <TextView
                 android:id="@+id/description"
-                android:textSize="20dp"
-                android:text="Description"
+                android:textSize="20sp"
                 android:textColor="@color/descolor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,20 +44,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.055"
-                app:layout_constraintVertical_bias="0.333">
+                app:layout_constraintVertical_bias="0.333"
+                tools:text="Description">
         </TextView>
         <TextView
-            android:id="@+id/time"
+            android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/timecolor"
-            android:text="Tommorow"
+            android:textSize="17sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/title"
             app:layout_constraintHorizontal_bias="0.928"
-            app:layout_constraintVertical_bias="0.503">
+            app:layout_constraintVertical_bias="0.503"
+            tools:text="Date">
     </TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

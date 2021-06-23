@@ -5,13 +5,13 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="accentDark">#262624</color>
     <color name="statusBar">#14171A</color>
-    <color name="darkGrey">#121212</color>
-    <color name="widgetBlack">#000000</color>
+    <color name="mainBG">#000000</color>
+    <color name="widgetColor">#121212</color>
     <color name="titleWhite">#F7F7F7</color>
     <color name="titlecolor">#CDDC39</color>
-    <color name="descolor">#403E3E</color>
+    <color name="descolor">#40C4FF</color>
     <color name="timecolor">#FF9800</color>
     <color name="TextBoxColor">#31322F</color>
     <color name="ButtonColor">#909181</color>
-    <color name="createButtonColor">#2C961B</color>
+    <color name="createButtonColor">#4CDD0E</color>
 </resources>
