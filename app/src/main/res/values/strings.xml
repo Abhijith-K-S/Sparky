@@ -13,4 +13,5 @@
     <string name="updateTask">Update Task</string>
     <string name="clock_icon">clock icon</string>
     <string name="calendar_icon">calendar icon</string>
+    <string name="delete_task">Delete Task</string>
 </resources>

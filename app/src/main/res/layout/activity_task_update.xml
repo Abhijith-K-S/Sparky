@@ -227,8 +227,28 @@
             android:textColor="@color/titleWhite"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/updateTimeButton" />
+            app:layout_constraintTop_toBottomOf="@+id/updateTimeButton"
+            app:layout_constraintVertical_bias="0.512" />
+
+        <Button
+            android:id="@+id/deleteTaskButton"
+            android:layout_width="108dp"
+            android:layout_height="47dp"
+            android:background="@color/deleteButtonColor"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="2.9"
+            android:shadowRadius="3"
+            android:text="@string/delete_task"
+            android:textColor="@color/titleWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateTimeButton"
+            app:layout_constraintVertical_bias="0.52" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

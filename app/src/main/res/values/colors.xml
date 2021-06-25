@@ -14,5 +14,6 @@
     <color name="TextBoxColor">#31322F</color>
     <color name="ButtonColor">#909181</color>
     <color name="createButtonColor">#904CDD0E</color>
+    <color name="deleteButtonColor">#88EA0404</color>
     <color name="fabButtonColor">#4CDD0E</color>
 </resources>

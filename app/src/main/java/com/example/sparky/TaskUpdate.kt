@@ -84,7 +84,23 @@ class TaskUpdate : AppCompatActivity(), DatePickerDialog.OnDateSetListener, Time
                 finish()
             }
         }
+
+        deleteTaskButton.setOnClickListener()
+        {
+            AlertDialog.Builder(this)
+                .setMessage("Are you sure you want delete this task?")
+                .setPositiveButton("YES") { dialog, whichButton ->
+                    taskViewModel.delete(task)
+                    showToast("Task deleted sucessfully!")
+                    finish()
+                }
+                .setNegativeButton("NO") { dialog, whichButton ->
+
+                }
+                .show()
+        }
     }
+
 
     override fun onBackPressed() {
         AlertDialog.Builder(this)
