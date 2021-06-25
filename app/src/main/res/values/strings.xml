@@ -8,5 +8,9 @@
     <string name="newDateText">Date</string>
     <string name="choose">Choose</string>
     <string name="newTimeText">Time</string>
+    <string name="updateTaskTitle">Update Task</string>
     <string name="createTask">Create Task</string>
+    <string name="updateTask">Update Task</string>
+    <string name="clock_icon">clock icon</string>
+    <string name="calendar_icon">calendar icon</string>
 </resources>

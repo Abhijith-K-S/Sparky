@@ -3,17 +3,17 @@
     package="com.example.sparky">
 
     <application
-        android:name=".TasksApplication"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TaskInput"></activity>
+        <activity android:name=".TaskUpdate"></activity>
+        <activity android:name=".TaskInput" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">

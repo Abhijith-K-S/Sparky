@@ -9,10 +9,10 @@ import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import kotlinx.android.synthetic.main.activity_task_input.*
+import kotlinx.android.synthetic.main.activity_task_update.*
 import java.util.*
 
-class TaskInput : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+class TaskUpdate : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     private var currentDay = 0
     private var currentMonth = 0
     private var currentYear = 0
@@ -29,15 +29,22 @@ class TaskInput : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_task_input)
+        setContentView(R.layout.activity_task_update)
 
-        newDateButton.setOnClickListener()
+        val task = intent.getParcelableExtra<Task>("extra_item")
+
+        updateTaskTitleBox.setText(task.title)
+        updateDescTextBox.setText(task.desc)
+        updateDateTextBox.text = task.date
+        updateTimeTextBox.text = task.time
+
+        updateDateButton.setOnClickListener()
         {
             getDateCalendar()
             DatePickerDialog(this,this,currentYear,currentMonth,currentDay).show()
         }
 
-        newTimeButton.setOnClickListener()
+        updateTimeButton.setOnClickListener()
         {
             getTimeCalendar()
             TimePickerDialog(this,this,currentHour,currentMinute,false).show()
@@ -45,33 +52,35 @@ class TaskInput : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
 
         taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
 
-        createTaskButton.setOnClickListener()
+        updateTaskButton.setOnClickListener()
         {
             var flag = true
-            if(newTaskTitleBox.text.equals("")) {
+            if(updateTaskTitleBox.text.equals("")) {
                 showToast("Please enter a valid title!")
                 flag = false
             }
-            if(newDateTextBox.text.equals("")) {
+            if(updateDateTextBox.text.equals("")) {
                 showToast("Please enter a valid date!")
                 flag = false
             }
-            if(newTimeTextBox.text.equals("")) {
+            if(updateTimeTextBox.text.equals("")) {
                 flag = false
                 showToast("Please enter a valid time!")
             }
 
             if(flag)
             {
-                val title = newTaskTitleBox.text.toString()
+                val title = updateTaskTitleBox.text.toString()
                 var desc = "No Description"
-                if(newDescTextBox.text.isNotEmpty())
-                    desc = newDescTextBox.text.toString()
-                val date = newDateTextBox.text.toString()
-                val time = newTimeTextBox.text.toString()
+                if(updateDescTextBox.text.isNotEmpty())
+                    desc = updateDescTextBox.text.toString()
+                val date = updateDateTextBox.text.toString()
+                val time = updateTimeTextBox.text.toString()
 
-                taskViewModel.insert(Task(0,title,desc,date,time))
-                showToast("Task successfully added!")
+                val updatedTask = Task(task.id,title,desc,date,time)
+
+                taskViewModel.update(updatedTask)
+                showToast("Task successfully updated!")
                 finish()
             }
         }
@@ -79,7 +88,7 @@ class TaskInput : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
 
     override fun onBackPressed() {
         AlertDialog.Builder(this)
-            .setMessage("You have unsaved changes. Are you sure you want to go back?")
+            .setMessage("Are you sure you want to go back?")
             .setPositiveButton(android.R.string.ok) { dialog, whichButton ->
                 super.onBackPressed()
             }
@@ -91,7 +100,7 @@ class TaskInput : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
 
     private fun showToast(message: String)
     {
-        val toast = Toast.makeText(this,message,Toast.LENGTH_SHORT)
+        val toast = Toast.makeText(this,message, Toast.LENGTH_SHORT)
         toast.show()
     }
 
@@ -133,7 +142,7 @@ class TaskInput : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
             if(savedMonth<10)
                 displayMonth = "0$displayMonth"
 
-            newDateTextBox.text = "$displayDay / $displayMonth / $savedYear"
+            updateDateTextBox.text = "$displayDay / $displayMonth / $savedYear"
         }
         else
             showToast("Please enter a valid date!")
@@ -167,6 +176,6 @@ class TaskInput : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimeP
         if(displayMinute.toInt()<10)
             displayMinute="0$displayMinute"
 
-        newTimeTextBox.text = "$displayHour:$displayMinute  $status"
+        updateTimeTextBox.text = "$displayHour:$displayMinute  $status"
     }
 }

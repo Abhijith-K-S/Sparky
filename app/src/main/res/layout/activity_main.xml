@@ -54,7 +54,7 @@
         android:id="@+id/createTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/createButtonColor"
+        android:backgroundTint="@color/fabButtonColor"
         android:tint="@color/titleWhite"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
