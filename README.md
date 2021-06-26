@@ -3,13 +3,13 @@ Sparky is an Android task reminder app built using kotlin. It uses Room Database
 
 ## Screenshots
 <p>
-<img src="images/home.jpg" width=200>
+<img src="images/home.jpg" width=150>
 &nbsp &nbsp
-<img src="images/newtask.jpg" width=200>
+<img src="images/newtask.jpg" width=150>
 &nbsp &nbsp
-<img src="images/list.jpg" width=200>
+<img src="images/list.jpg" width=150>
 &nbsp &nbsp
-<img src="images/updatetask.jpg" width=200>
+<img src="images/updatetask.jpg" width=150>
 </p>
 
 ## Installation
