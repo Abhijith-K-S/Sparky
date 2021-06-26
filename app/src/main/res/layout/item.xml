@@ -16,93 +16,111 @@
     android:foreground="?android:attr/selectableItemBackground"
     android:focusable="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        <TextView
+        <LinearLayout
+            android:layout_width="192dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
                 android:id="@+id/title"
-                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:maxLength="30"
                 android:textColor="@color/titlecolor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.05"
-                app:layout_constraintVertical_bias="0.125"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded"
                 tools:text="Title">
-        </TextView>
+            </TextView>
 
-        <TextView
+            <TextView
                 android:id="@+id/description"
-                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:maxLength="20"
                 android:textColor="@color/descolor"
+                android:textSize="14sp"
+                tools:ignore="RtlHardcoded"
+                tools:text="Description">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/calendar_icon"
+                    android:layout_width="19dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="3dp"
+                    android:contentDescription="@string/calendar_icon"
+                    app:srcCompat="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/timecolor"
+                    android:textSize="15sp"
+                    tools:text="Date">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="5dp"
+                tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/clock_icon"
+                android:layout_width="18dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@string/clock_icon"
+                app:srcCompat="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/title"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.055"
-                app:layout_constraintVertical_bias="0.333"
-                tools:text="Description">
-        </TextView>
+                android:textColor="@color/timecolor"
+                android:textSize="15sp"
+                tools:text="Time">
+            </TextView>
+        </LinearLayout>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/timecolor"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/calendar_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.25"
-            tools:text="Date">
-        </TextView>
-
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/timecolor"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/clock_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.58"
-            tools:text="Time">
-        </TextView>
-
-        <ImageView
-            android:id="@+id/calendar_icon"
-            android:layout_width="19dp"
-            android:layout_height="14dp"
-            android:contentDescription="@string/calendar_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.664"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.280
-"
-            app:srcCompat="@drawable/calendar" />
-
-        <ImageView
-            android:id="@+id/clock_icon"
-            android:layout_width="18dp"
-            android:layout_height="12dp"
-            android:contentDescription="@string/clock_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.663"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.579"
-            app:srcCompat="@drawable/clock" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

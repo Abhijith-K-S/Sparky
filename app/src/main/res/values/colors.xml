@@ -5,8 +5,8 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="accentDark">#262624</color>
     <color name="statusBar">#14171A</color>
-    <color name="mainBG">#000000</color>
-    <color name="widgetColor">#121212</color>
+    <color name="mainBG">#121212</color>
+    <color name="widgetColor">#272727</color>
     <color name="titleWhite">#F7F7F7</color>
     <color name="titlecolor">#CDDC39</color>
     <color name="descolor">#40C4FF</color>
@@ -16,4 +16,5 @@
     <color name="createButtonColor">#904CDD0E</color>
     <color name="deleteButtonColor">#88EA0404</color>
     <color name="fabButtonColor">#4CDD0E</color>
+    <color name="emptyMessageTextColor">#40FFFFFF</color>
 </resources>

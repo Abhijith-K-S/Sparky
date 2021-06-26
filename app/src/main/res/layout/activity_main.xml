@@ -18,6 +18,7 @@
         android:fontFamily="@font/roboto"
         android:gravity="center_horizontal"
         android:text="@string/title"
+        android:background="@color/accentDark"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/titleWhite"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,11 +29,26 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainTitle">
+
+        <TextView
+            android:id="@+id/emptyView"
+            android:layout_width="268dp"
+            android:layout_height="57dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal"
+            android:text="@string/noItemText"
+            android:visibility="gone"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/titleWhite"
+            android:textSize="18sp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
